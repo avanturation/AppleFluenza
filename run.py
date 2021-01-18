@@ -17,7 +17,7 @@ class Siri(commands.Bot):
         )
         self.config = config
         gather_commands(self)
-        asyncio.create_task(CheckGalaxyToGo(self))
+        self.loop = asyncio.get_event_loop()
 
     async def on_message(self, message):
         if not message.author.bot: 
@@ -30,6 +30,7 @@ class Siri(commands.Bot):
         )
         if not self.user.id == 770612780042551318: 
             print("Warning : Not running on real Siri Bot.")
+        self.loop.create_task(CheckGalaxyToGo(self))
 
     async def on_command_error(self, context, exception):
         if isinstance(exception, commands.CommandInvokeError):

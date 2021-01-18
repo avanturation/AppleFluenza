@@ -11,7 +11,8 @@ CHANNELID = 800755427200466964
 
 async def GetData():
     data = await Parser.request(TOGOURL)
-    return orjson.loads(data["data"])
+    data = orjson.loads(data)
+    return data["data"]
 
 async def CheckGalaxyToGo(bot: commands.Bot) -> Any:
     channel = bot.get_channel(CHANNELID)
