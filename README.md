@@ -26,11 +26,11 @@ python3 -m pip install pyapple
 
 ### Tested environment
 
-* macOS Big Sur 11.1
+* [macOS Big Sur 11.1](https://www.apple.com/macos/big-sur/)
 
-* Python 3.8.6 for Darwin
+* [Python 3.8.6 for Darwin](https://www.python.org/downloads/release/python-386/)
 
-* MacBookPro15,1 and Macmini9,1 (Tested on M1)
+* [MacBookPro15,1](https://support.apple.com/kb/SP776) and [Macmini9,1](https://www.apple.com/mac-mini/) (Tested on M1)
 
 #### Windows
 
