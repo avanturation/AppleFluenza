@@ -70,8 +70,8 @@ python3 -m Siri
 
 ## Credits
 
-[Apple](https://apple.com)
+[Apple (for providing firmwares)](https://apple.com)
 
-[IPSW.me](https://ipsw.me)
+[IPSW.me (for providing Firmware API)](https://ipsw.me)
 
-[Saidbysolo](https://github.com/saidbysolo)
+[Hiyobot (for infrastructures)](https://github.com/Saebasol/Hiyobot)
