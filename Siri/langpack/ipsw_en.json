@@ -1,0 +1,7 @@
+{
+    "DEVICE_NAME": "Device Name",
+    "DEVICE_IDENTIFIER": "Identifier",
+    "IPSW_IDENTIFIER": "IPSW Identifier",
+    "IPSW_VERSION": "IPSW Version",
+    "IPSW_BUILDID": "Build ID"
+}

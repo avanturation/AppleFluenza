@@ -28,10 +28,10 @@ def auto_load_cogs(bot: Siri):
 
             try:
                 bot.load_extension(cmdname)
-                bot.logger.log(f"{cmdname} Cog successfully loaded.")
+                bot.logger.info(f"{cmdname} Cog successfully loaded.")
 
             except Exception as error:
-                bot.logger.log(f"{cmdname} failed to load: {error}")
+                bot.logger.error(f"{cmdname} failed to load: {error}")
 
 
 bot = Siri()
