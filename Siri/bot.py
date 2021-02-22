@@ -11,12 +11,16 @@ class Siri(commands.Bot):
             command_prefix="!",
             help_command=None,
             description="A discord bot for Apple firmwares",
+            activity=discord.Game("Siri Testing"),
             intents=discord.Intents.all(),
         )
         self.dbkr_token = getenv("KOREANBOTS_TOKEN")
         self.uqbots_token = getenv("UNIQUEBOTS_TOKEN")
         self.logger = Log.defaultLogger("Siri")
         self.discord_logger = Log.discordLogger()
+
+    async def on_ready(self):
+        self.logger.info("Siri Ready.")
 
 
 def auto_load_cogs(bot: Siri):

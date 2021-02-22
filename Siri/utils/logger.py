@@ -1,4 +1,5 @@
 import logging
+import discord
 
 FORMATTER = logging.Formatter("[%(levelname)s][%(name)s][%(asctime)s]: %(message)s")
 
@@ -41,14 +42,11 @@ class Log:
     def discordLogger() -> logging.Logger:
         logger = logging.getLogger("discord")
         logger.setLevel(logging.INFO)
-
-        if not logger.hasHandlers():
-            streamhandler = logging.StreamHandler()
-            streamhandler.setFormatter(FORMATTER)
-            filehandler = logging.FileHandler(f"Siri/logs/discord.txt", "a")
-            filehandler.setFormatter(FORMATTER)
-            logger.addHandler(streamhandler)
-            logger.addHandler(filehandler)
-
-        logger.info(f"Discord Loaded.")
+        logger.handlers.clear()
+        streamhandler = logging.StreamHandler()
+        streamhandler.setFormatter(FORMATTER)
+        filehandler = logging.FileHandler(f"Siri/logs/discord.txt", "a")
+        filehandler.setFormatter(FORMATTER)
+        logger.addHandler(streamhandler)
+        logger.addHandler(filehandler)
         return logger

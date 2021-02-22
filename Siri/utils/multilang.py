@@ -6,6 +6,12 @@ cache = {}
 
 
 def discrim_region(object: Guild) -> str:
+    overrides = json.loads("Siri/langpack/guild_override.json")
+    _id = str(object.id)
+
+    if _id in overrides:
+        return overrides[_id]
+
     return "kr" if object.region == VoiceRegion.south_korea else "en"
 
 
