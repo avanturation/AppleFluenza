@@ -1,5 +1,5 @@
 from discord import Embed
-from ..utils.multilang import get_lang
+from Siri.utils.multilang import get_lang
 
 COLOR = 0x000000
 

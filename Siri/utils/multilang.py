@@ -1,5 +1,5 @@
 from discord import Guild, VoiceRegion
-from ..bot import bot
+from Siri.bot import bot
 import json
 import aiofiles
 

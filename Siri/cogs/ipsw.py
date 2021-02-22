@@ -1,8 +1,9 @@
 import pyapple
-import discord
+
 from discord.ext import commands
-from ..bot import Siri
-from ..utils.multilang import discrim_region
+from Siri.bot import Siri
+from Siri.utils.multilang import discrim_region
+from Siri.embeds.ipsw import *
 
 
 class IPSWCogs(commands.Cog):
@@ -14,10 +15,12 @@ class IPSWCogs(commands.Cog):
 
     @commands.command(name="기기정보", aliases=["device"])
     async def device_command(self, ctx, identfier: str):
+        embed_list = []
         guild_region = discrim_region(ctx.guild)
         device_info = await self.client.device(identfier)
-
-        embed = discord.Embed(title="")
+        idevice_embed = await make_embed_idevice(guild_region, device_info)
+        for ipsw_data in device_info["firmwares"]:
+            embed_list.append(await make_embed_ipsw(guild_region, ipsw_data))
 
 
 def setup(bot: Siri):

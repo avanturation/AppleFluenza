@@ -1,7 +1,7 @@
 import pyapple
 import discord
 from discord.ext import commands
-from ..bot import Siri
+from Siri.bot import Siri
 
 
 class MACOSCogs(commands.Cog):
