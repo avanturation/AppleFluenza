@@ -1,0 +1,14 @@
+{
+    "info": "info",
+    "click": "Click",
+    "device_name": "Device Name",
+    "device_identifier": "Device Identifier",
+    "ipsw_identifier": "IPSW Identifier",
+    "ipsw_version": "IPSW Version",
+    "ipsw_buildid": "Build ID",
+    "ipsw_info": "IPSW info",
+    "ipsw_filesize": "IPSW file size",
+    "ipsw_releasedate": "Released date",
+    "ipsw_uploaddate": "Uploaded date",
+    "ipsw_signed": "Signing status"
+}

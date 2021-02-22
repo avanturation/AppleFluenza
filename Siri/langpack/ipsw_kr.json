@@ -1,7 +1,0 @@
-{
-    "DEVICE_NAME": "기기 이름",
-    "DEVICE_IDENTIFIER": "기기 식별자",
-    "IPSW_IDENTIFIER": "IPSW 식별자",
-    "IPSW_VERSION": "IPSW 버전",
-    "IPSW_BUILDID": "빌드 ID"
-}

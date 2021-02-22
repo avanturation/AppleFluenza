@@ -1,0 +1,14 @@
+{
+    "info": "정보",
+    "click": "클릭",
+    "device_name": "기기 이름",
+    "device_identifier": "기기 식별자",
+    "ipsw_identifier": "IPSW 식별자",
+    "ipsw_version": "IPSW 버전",
+    "ipsw_buildid": "빌드 ID",
+    "ipsw_info": "IPSW 정보",
+    "ipsw_filesize": "IPSW 용량",
+    "ipsw_releasedate": "출시 날짜",
+    "ipsw_uploaddate": "업로드 날짜",
+    "ipsw_signed": "사이닝 여부"
+}
