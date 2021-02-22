@@ -39,7 +39,7 @@ git clone https://github.com/UniqueCodeGit/Siri
 
 cd Siri
 
-python3 -m pip install requirements.txt
+python3 -m pip install -r requirements.txt
 
 python3 -m Siri
 ```
@@ -51,7 +51,7 @@ git clone https://github.com/UniqueCodeGit/Siri
 
 cd Siri
 
-python3 -m pip install requirements.txt
+python3 -m pip install -r requirements.txt
 
 python3 -m Siri
 ```
@@ -63,7 +63,7 @@ git clone https://github.com/UniqueCodeGit/Siri
 
 cd Siri
 
-python3 -m pip install requirements.txt
+python3 -m pip install -r requirements.txt
 
 python3 -m Siri
 ```
