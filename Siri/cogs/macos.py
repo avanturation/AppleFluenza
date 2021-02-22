@@ -1,5 +1,5 @@
-import pyapple
 import discord
+import pyapple
 from discord.ext import commands
 from Siri.bot import Siri
 

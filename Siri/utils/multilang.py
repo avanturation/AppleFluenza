@@ -1,7 +1,8 @@
+import json
+
+import aiofiles
 from discord import Guild, VoiceRegion
 from Siri.bot import bot
-import json
-import aiofiles
 
 cache = {}
 

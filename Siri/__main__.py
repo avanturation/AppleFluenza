@@ -1,4 +1,5 @@
-from Siri.bot import bot, auto_load_cogs
+from Siri.bot import auto_load_cogs, bot
+
 from .utils.getenv import getenv
 
 token = getenv("TOKEN")

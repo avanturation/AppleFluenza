@@ -1,9 +1,8 @@
 import pyapple
-
 from discord.ext import commands
 from Siri.bot import Siri
-from Siri.utils.multilang import discrim_region
 from Siri.embeds.ipsw import *
+from Siri.utils.multilang import discrim_region
 
 
 class IPSWCogs(commands.Cog):

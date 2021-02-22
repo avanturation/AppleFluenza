@@ -1,4 +1,5 @@
 import logging
+
 import discord
 
 FORMATTER = logging.Formatter("[%(levelname)s][%(name)s][%(asctime)s]: %(message)s")
