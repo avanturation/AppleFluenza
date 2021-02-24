@@ -19,24 +19,22 @@ class Paginator:
 
     async def start(self):
         index = 0
-        await self.msg.edit(embed=self.embeds[index])
+        await self.msg.edit(content="", embed=self.embeds[index])
 
         for emojis in emoji_list:
             await self.msg.add_reaction(emojis)
 
         while True:
             try:
-                result, result2 = await self.bot.wait_for(
+                result, author = await self.bot.wait_for(
                     "reaction_add", check=self.check, timeout=240.0
                 )
             except TimeoutError:
                 await self.msg.clear_reactions()
-                await self.ctx.send("Timeout!")
                 break
 
             if result.emoji == "❎":
                 await self.msg.clear_reactions()
-                await self.ctx.send("Canceled!")
                 break
 
             elif result.emoji == "▶":

@@ -2,6 +2,7 @@
     "info": "정보",
     "click": "클릭",
     "device_name": "기기 이름",
+    "device_nextpage": "다음 페이지는 펌웨어 리스트입니다.",
     "device_identifier": "기기 식별자",
     "ipsw_identifier": "IPSW 식별자",
     "ipsw_version": "IPSW 버전",

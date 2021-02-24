@@ -5,7 +5,7 @@ COLOR = 0x000000
 
 
 async def make_embed_idevice(region: str, data) -> Embed:
-    embed = Embed(title=f"{data.name} {await get_lang(region,'info')}")
+    embed = Embed(title=f":mobile_phone: {data.name} {await get_lang(region,'info')}")
     embed.add_field(
         name=f"{await get_lang(region,'device_identifier')}",
         value=f"{data.identifier}",
@@ -15,12 +15,12 @@ async def make_embed_idevice(region: str, data) -> Embed:
     embed.add_field(name="Platform", value=f"{data.platform}", inline=False)
     embed.add_field(name="CPID", value=f"{data.cpid}", inline=False)
     embed.add_field(name="BDID", value=f"{data.bdid}", inline=False)
-
+    embed.set_footer(text=await get_lang(region, "device_nextpage"))
     return embed
 
 
 async def make_embed_ipsw(region: str, data) -> Embed:
-    embed = Embed(title=f"IPSW {await get_lang(region,'info')}")
+    embed = Embed(title=f":card_box: IPSW {await get_lang(region,'info')}")
     embed.add_field(
         name=f"{await get_lang(region,'ipsw_identifier')}",
         value=f"{data.identifier}",

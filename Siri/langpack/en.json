@@ -1,14 +1,15 @@
 {
-    "info": "info",
+    "info": "Info",
     "click": "Click",
     "device_name": "Device Name",
+    "device_nextpage": "Next page is the firmwares list of the device.",
     "device_identifier": "Device Identifier",
     "ipsw_identifier": "IPSW Identifier",
     "ipsw_version": "IPSW Version",
     "ipsw_buildid": "Build ID",
-    "ipsw_info": "IPSW info",
-    "ipsw_filesize": "IPSW file size",
-    "ipsw_releasedate": "Released date",
-    "ipsw_uploaddate": "Uploaded date",
-    "ipsw_signed": "Signing status"
+    "ipsw_info": "IPSW Info",
+    "ipsw_filesize": "IPSW File Size",
+    "ipsw_releasedate": "Released Date",
+    "ipsw_uploaddate": "Uploaded Date",
+    "ipsw_signed": "Signing Status"
 }
