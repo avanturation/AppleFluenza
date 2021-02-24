@@ -26,7 +26,7 @@ class Paginator:
 
         while True:
             try:
-                result = await self.bot.wait_for(
+                result, result2 = await self.bot.wait_for(
                     "reaction_add", check=self.check, timeout=240.0
                 )
             except TimeoutError:

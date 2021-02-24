@@ -1,13 +1,15 @@
 import discord
 from discord.ext import commands
 from Siri.bot import Siri
+from Siri.utils.logger import Log
 
 
 class CoreCogs(commands.Cog):
-    patching = False
+    patching = True
 
     def __init__(self, bot) -> None:
         self.bot = bot
+        self.logger = Log.cogLogger(self)
 
 
 def setup(bot: Siri):
@@ -16,4 +18,4 @@ def setup(bot: Siri):
         bot.add_cog(CoreCogs(bot))
 
     elif CoreCogs.patching:
-        return bot.logger.warn(f"Core Cog is in patching status.")
+        return bot.logger.warn(f"CoreCogs is in patching status.")

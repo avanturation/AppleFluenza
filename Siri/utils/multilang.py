@@ -28,9 +28,6 @@ async def discrim_region(object: Guild) -> str:
 async def get_lang(region: str, target: str) -> str:
     path = f"Siri/langpack/{region}.json"
 
-    if cache[path]:
-        return cache[path][target]
-
     try:
         fp = await open_file(path)
         lang_pack = json.loads(fp)
