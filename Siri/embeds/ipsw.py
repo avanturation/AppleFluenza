@@ -5,6 +5,10 @@ COLOR = 0x000000
 
 
 async def make_embed_idevice(region: str, data) -> Embed:
+    embed_list = [
+        await make_embed_ipsw(region, ipsw_data) for ipsw_data in data.firmwares
+    ]
+
     embed = Embed(title=f":mobile_phone: {data.name} {await get_lang(region,'info')}")
     embed.add_field(
         name=f"{await get_lang(region,'device_identifier')}",
@@ -16,7 +20,11 @@ async def make_embed_idevice(region: str, data) -> Embed:
     embed.add_field(name="CPID", value=f"{data.cpid}", inline=False)
     embed.add_field(name="BDID", value=f"{data.bdid}", inline=False)
     embed.set_footer(text=await get_lang(region, "device_nextpage"))
-    return embed
+
+    embed_list.append(embed)
+    embed_list.reverse()
+
+    return embed_list
 
 
 async def make_embed_ipsw(region: str, data) -> Embed:

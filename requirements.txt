@@ -1,3 +1,3 @@
 python-dotenv
-pyapple
+pyapple>=1.0.2
 aiofiles

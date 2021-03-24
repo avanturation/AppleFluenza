@@ -1,8 +1,9 @@
+from discord.utils import get
 import pyapple
 from discord.ext import commands
 from Siri.bot import Siri
 from Siri.embeds.ipsw import *
-from Siri.utils.multilang import discrim_region
+from Siri.utils.multilang import discrim_region, get_lang
 from Siri.utils.paginator import Paginator
 from Siri.utils.logger import Log
 
@@ -17,17 +18,25 @@ class IPSWCogs(commands.Cog):
 
     @commands.command(name="기기정보", aliases=["device"])
     async def device_command(self, ctx, identfier: str):
-        embed_list = []
         guild_region = await discrim_region(ctx.guild)
-        msg = await ctx.send("Fetching..")
+        msg = await ctx.send(await get_lang(guild_region, "fetching"))
+
         device_info = await self.client.device(identfier)
+
         idevice_embed = await make_embed_idevice(guild_region, device_info)
-        for ipsw_data in device_info.firmwares:
-            embed_list.append(await make_embed_ipsw(guild_region, ipsw_data))
-        embed_list.append(idevice_embed)
-        embed_list.reverse()
-        page = Paginator(self.bot, ctx, msg, embed_list)
+
+        page = Paginator(self.bot, ctx, msg, idevice_embed)
         await page.start()
+
+    @commands.command(name="펌웨어", aliases=["ipsw"])
+    async def ipsw_command(self, ctx, identifier: str, build_id: str):
+        guild_region = await discrim_region(ctx.guild)
+        msg = await ctx.send(await get_lang(guild_region, "fetching"))
+
+        ipsw_info = await self.client.ipsw(identifier, build_id)
+        ipsw_embed = await make_embed_ipsw(guild_region, ipsw_info)
+
+        await msg.edit(embed=ipsw_embed)
 
 
 def setup(bot: Siri):
