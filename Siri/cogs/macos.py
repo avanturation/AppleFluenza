@@ -3,6 +3,9 @@ import pyapple
 from discord.ext import commands
 from Siri.bot import Siri
 from Siri.utils.logger import Log
+from Siri.utils.multilang import discrim_region, get_lang
+
+from typing import Optional
 
 
 class MACOSCogs(commands.Cog):
@@ -12,6 +15,11 @@ class MACOSCogs(commands.Cog):
         self.bot = bot
         self.logger = Log.cogLogger(self)
         self.client = pyapple.Client()
+
+    @commands.command(name="", aliases=[""])
+    async def get_macos(self, ctx, seed: Optional[str] = "publicseed"):
+        guild_region = await discrim_region(ctx.guild)
+        available_macos = await self.client.available_macos(seed)
 
 
 def setup(bot: Siri):

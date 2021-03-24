@@ -1,10 +1,11 @@
 from discord import Embed
 from Siri.utils.multilang import get_lang
+from typing import List
 
 COLOR = 0x000000
 
 
-async def make_embed_idevice(region: str, data) -> Embed:
+async def make_embed_idevice(region: str, data) -> List[Embed]:
     embed_list = [
         await make_embed_ipsw(region, ipsw_data) for ipsw_data in data.firmwares
     ]
