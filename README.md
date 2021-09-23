@@ -2,6 +2,12 @@
 
 > A Discord bot for Apple firmwares.
 
+## Disclaimer
+
+This project will be suspended forever due to the shutdown of dpy.
+
+I respect the decision that Danny made. Thank you for your dedication on dpy.
+
 ## Features
 
 Siri can provide firmware informations of Apple Devices (iPhone, iPad, iPod .. etc)
