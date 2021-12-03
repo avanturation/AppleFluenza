@@ -1,3 +1,7 @@
 python-dotenv
-pyapple>=1.0.2
+pyapple>=2.0.0
 aiofiles
+colorlog
+pyfiglet
+termcolor
+py-cord
