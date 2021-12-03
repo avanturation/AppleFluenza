@@ -1,22 +1,27 @@
 import os
 
-import discord
-from discord.ext import commands
+from discord import Game
+from discord import Intents
+from discord.ext.commands import Bot
 
-from utils.getenv import getenv
 from utils.logger import create_logger
 
+from pyapple import Apple
 
-class AppleFluenza(commands.Bot):
+
+class AppleFluenza(Bot):
     def __init__(self) -> None:
         super().__init__(
             command_prefix="!",
             help_command=None,
-            activity=discord.Game("applefluenza"),
-            intents=discord.Intents.all(),
+            activity=Game("applefluenza"),
+            intents=Intents.all(),  # this will be removed after the transition to slash is completed
         )
+
         self.logger = create_logger("applefluenza")
         self.discord_logger = create_logger("discord")
+
+        self.apple = Apple()
 
     async def on_ready(self):
         self.logger.info("AppleFluenza Ready.")

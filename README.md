@@ -11,3 +11,4 @@ To be filled later.
 
 ## Build and run
 
+**You must use Pycord development version to run correctly.**
